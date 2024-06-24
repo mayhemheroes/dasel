@@ -9,6 +9,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nothing yet.
 
+## [v2.0.2] - 2022-12-07
+
+### Fixed
+
+- Argument parsing issue that caused files to be written to the wrong place. See [discussion 268](https://github.com/TomWright/dasel/discussions/268).
+
+## [v2.0.1] - 2022-12-07
+
+### Added
+
+- `float` type in `put` command.
+
+### Fixed
+
+- Output values are now correctly de-referenced. This fixed issues with encoded values not appearing correctly.
+- Escape characters in selector strings now work as expected.
+
+## [v2.0.0] - 2022-12-02
+
+See [documentation](https://daseldocs.tomwright.me) for all changes.
+
+- Selector syntax 
+
 ## [v1.27.3] - 2022-10-18
 
 ### Fixed
@@ -502,7 +525,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Everything!
 
-[unreleased]: https://github.com/TomWright/dasel/compare/v1.27.3...HEAD
+[unreleased]: https://github.com/TomWright/dasel/compare/v2.0.2...HEAD
+[v2.0.2]: https://github.com/TomWright/dasel/compare/v2.0.1...v2.0.2
+[v2.0.1]: https://github.com/TomWright/dasel/compare/v2.0.0...v2.0.1
+[v2.0.0]: https://github.com/TomWright/dasel/compare/v1.27.3...v2.0.0
 [v1.27.3]: https://github.com/TomWright/dasel/compare/v1.27.2...v1.27.3
 [v1.27.2]: https://github.com/TomWright/dasel/compare/v1.27.1...v1.27.2
 [v1.27.1]: https://github.com/TomWright/dasel/compare/v1.27.0...v1.27.1

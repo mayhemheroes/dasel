@@ -16,6 +16,12 @@ Dasel (short for data-selector) allows you to query and modify data structures u
 
 Comparable to [jq](https://github.com/stedolan/jq) / [yq](https://github.com/kislyuk/yq), but supports JSON, YAML, TOML, XML and CSV with zero runtime dependencies.
 
+## V2 Pre-release
+
+Dasel V2 is now in it's pre-release stage.
+
+Please check out the docs at [https://daseldocs.tomwright.me](https://daseldocs.tomwright.me), or the code on branch `v2-wip` for more information.
+
 ## One tool to rule them all
 
 Say good bye to learning new tools just to work with a different data format.
@@ -57,11 +63,11 @@ For more information see the [installation documentation](https://daseldocs.tomw
 ### Select
 
 ```bash
-echo '{"name": "Tom"}' | dasel -r json '.name'
+echo '{"name": "Tom"}' | dasel -r json 'name'
 "Tom"
 ```
 
-See [select documentation](https://daseldocs.tomwright.me/usage/select).
+See [select documentation](https://daseldocs.tomwright.me/commands/select).
 
 ### Convert json to yaml
 
@@ -70,19 +76,19 @@ echo '{"name": "Tom"}' | dasel -r json -w yaml
 name: Tom
 ```
 
-See [select documentation](https://daseldocs.tomwright.me/usage/select).
+See [select documentation](https://daseldocs.tomwright.me/commands/select).
 
 ### Put
 
 ```bash
-echo '{"name": "Tom"}' | dasel put string -r json '.email' 'contact@tomwright.me'
+echo '{"name": "Tom"}' | dasel put -r json -t string -v 'contact@tomwright.me' 'email'
 {
   "email": "contact@tomwright.me",
   "name": "Tom"
 }
 ```
 
-See [put documentation](https://daseldocs.tomwright.me/usage/put).
+See [put documentation](https://daseldocs.tomwright.me/commands/put).
 
 ### Delete
 
@@ -96,7 +102,7 @@ echo '{
 }
 ```
 
-See [delete documentation](https://daseldocs.tomwright.me/usage/delete).
+See [delete documentation](https://daseldocs.tomwright.me/commands/delete).
 
 ## Completion
 

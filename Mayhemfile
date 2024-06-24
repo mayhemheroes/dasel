@@ -1,0 +1,7 @@
+project: dasel
+target: dasel
+
+cmds:
+  - cmd: /dasel select -f input.json
+    filepath: input.json
+    env: {}
